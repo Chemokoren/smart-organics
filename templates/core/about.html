@@ -1,0 +1,224 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header" id="about-header">
+    <div class="container">
+        <h1>About Us</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'core:home' %}">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">About Us</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<!-- ── Company Overview ────────────────────────────────── -->
+<section class="section" id="company-overview">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 animate-on-scroll">
+                <div class="about-image-wrapper">
+                    <img src="{% static 'images/sections/farmers-working.png' %}" alt="Farmers working together">
+                </div>
+            </div>
+            <div class="col-lg-6 animate-on-scroll delay-2">
+                <span class="hero-badge" style="background: rgba(31,107,58,0.08); color: var(--organic-green); border-color: rgba(31,107,58,0.15);">
+                    <i class="bi bi-building"></i> Est. {{ company_year }}
+                </span>
+                <h2 class="mt-3 mb-3">Who We Are</h2>
+                <p class="lead" style="color: var(--text-dark);">
+                    Smart Organics Limited is a Kenyan agribusiness company established in 2015 and incorporated 
+                    in 2019 under the Companies Act, 2015 as a Private Limited Company.
+                </p>
+                <p>
+                    The company was founded with the vision of transforming smallholder agriculture through 
+                    sustainable farming practices, access to quality agricultural inputs, and structured market 
+                    opportunities. Headquartered in Eldoret, Uasin Gishu County, we work closely with smallholder 
+                    farmers, farmer groups, cooperatives, and agricultural development partners.
+                </p>
+                <p>
+                    Through innovation, partnerships, and farmer-centered solutions, Smart Organics Limited 
+                    contributes to the development of a more productive, profitable, and sustainable agricultural sector.
+                </p>
+                <div class="d-flex flex-wrap gap-4 mt-4">
+                    <div class="text-center">
+                        <div class="fw-bold fs-3" style="color: var(--organic-green);">2015</div>
+                        <small class="text-muted">Founded</small>
+                    </div>
+                    <div class="text-center">
+                        <div class="fw-bold fs-3" style="color: var(--organic-green);">2019</div>
+                        <small class="text-muted">Incorporated</small>
+                    </div>
+                    <div class="text-center">
+                        <div class="fw-bold fs-3" style="color: var(--organic-green);">Eldoret</div>
+                        <small class="text-muted">Headquarters</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Mission & Vision ────────────────────────────────── -->
+<section class="section section-gray" id="mission-vision">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-6 animate-on-scroll delay-1">
+                <div class="so-card h-100">
+                    <div class="card-body p-4 p-lg-5">
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <div style="width: 60px; height: 60px; border-radius: var(--radius-md); background: linear-gradient(135deg, var(--organic-green), var(--green-light)); display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-rocket-takeoff-fill text-white fs-4"></i>
+                            </div>
+                            <h3 class="mb-0">Our Mission</h3>
+                        </div>
+                        <p class="fs-5" style="line-height: 1.8; color: var(--text-dark);">
+                            To provide farmers with high-quality organic agricultural inputs, certified seedlings, 
+                            and professional agronomic support that enhance productivity, sustainability, and 
+                            environmental conservation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 animate-on-scroll delay-2">
+                <div class="so-card h-100">
+                    <div class="card-body p-4 p-lg-5">
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <div style="width: 60px; height: 60px; border-radius: var(--radius-md); background: linear-gradient(135deg, var(--harvest-yellow), var(--yellow-light)); display: flex; align-items: center; justify-content: center;">
+                                <i class="bi bi-eye-fill fs-4" style="color: var(--deep-green);"></i>
+                            </div>
+                            <h3 class="mb-0">Our Vision</h3>
+                        </div>
+                        <p class="fs-5" style="line-height: 1.8; color: var(--text-dark);">
+                            To become East Africa's most trusted provider of sustainable agricultural solutions, 
+                            empowering farmers to build profitable and resilient farming enterprises.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Core Values ─────────────────────────────────────── -->
+<section class="section" id="core-values">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <h2>Our Core Values</h2>
+            <p class="lead">The principles that guide everything we do at Smart Organics.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-6 animate-on-scroll delay-1">
+                <div class="value-item">
+                    <div class="value-icon"><i class="bi bi-tree-fill"></i></div>
+                    <div>
+                        <h5>Sustainability</h5>
+                        <p>Promoting environmentally responsible farming practices that protect our soils, water, and ecosystems for future generations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 animate-on-scroll delay-2">
+                <div class="value-item">
+                    <div class="value-icon"><i class="bi bi-shield-check"></i></div>
+                    <div>
+                        <h5>Integrity</h5>
+                        <p>Operating with transparency, honesty, and accountability in every interaction with farmers, partners, and stakeholders.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 animate-on-scroll delay-3">
+                <div class="value-item">
+                    <div class="value-icon"><i class="bi bi-people-fill"></i></div>
+                    <div>
+                        <h5>Farmer Empowerment</h5>
+                        <p>Supporting farmers with knowledge, resources, and opportunities to transition from subsistence farming to commercial enterprises.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 animate-on-scroll delay-4">
+                <div class="value-item">
+                    <div class="value-icon"><i class="bi bi-lightbulb-fill"></i></div>
+                    <div>
+                        <h5>Innovation</h5>
+                        <p>Continuously improving agricultural solutions and services through research, technology, and modern farming practices.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 animate-on-scroll delay-5">
+                <div class="value-item">
+                    <div class="value-icon"><i class="bi bi-award-fill"></i></div>
+                    <div>
+                        <h5>Quality Excellence</h5>
+                        <p>Delivering reliable and high-quality agricultural products and services that farmers can depend on season after season.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Tagline Banner ──────────────────────────────────── -->
+<section class="cta-section" id="tagline-banner">
+    <div class="container text-center position-relative" style="z-index: 2;">
+        <div class="animate-on-scroll">
+            <p class="font-accent mb-2" style="color: var(--harvest-yellow); font-size: 1.1rem;">Our Promise</p>
+            <h2 style="color: var(--white); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; letter-spacing: 1px;">
+                Healthy Soil <span style="color: var(--harvest-yellow);">•</span> 
+                Wealthy Farmers <span style="color: var(--harvest-yellow);">•</span> 
+                Better Life
+            </h2>
+            <p class="mt-3" style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto;">
+                This is more than a tagline — it's our commitment to every farmer we serve.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ── Team Section ────────────────────────────────────── -->
+{% if team_members %}
+<section class="section section-gray" id="team-section">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <h2>Our Team</h2>
+            <p class="lead">The passionate professionals behind Smart Organics.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            {% for member in team_members %}
+            <div class="col-lg-3 col-md-6 animate-on-scroll delay-{{ forloop.counter }}">
+                <div class="so-card text-center">
+                    {% if member.photo %}
+                    <div class="card-img-wrapper">
+                        <img src="{{ member.photo.url }}" alt="{{ member.name }}" class="card-img-top" style="height: 280px;">
+                    </div>
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title mb-1">{{ member.name }}</h5>
+                        <p class="mb-2" style="color: var(--organic-green); font-weight: 600; font-size: 0.9rem;">{{ member.role }}</p>
+                        {% if member.bio %}
+                        <p class="card-text" style="font-size: 0.88rem;">{{ member.bio|truncatewords:20 }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- ── Contact CTA ─────────────────────────────────────── -->
+<section class="section" id="about-cta">
+    <div class="container text-center animate-on-scroll">
+        <h2 class="mb-3">Want to Partner With Us?</h2>
+        <p class="lead mx-auto" style="max-width: 600px;">
+            Whether you're a farmer, cooperative, or development partner, we'd love to hear from you.
+        </p>
+        <a href="{% url 'core:contact' %}" class="btn btn-primary-brand btn-lg mt-3" id="about-contact-cta">
+            <i class="bi bi-envelope-fill me-2"></i> Contact Us Today
+        </a>
+    </div>
+</section>
+{% endblock %}

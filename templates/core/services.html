@@ -1,0 +1,331 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header" id="services-header">
+    <div class="container">
+        <h1>Our Services</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'core:home' %}">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Services</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<!-- ── Services Overview ───────────────────────────────── -->
+<section class="section" id="services-overview">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <h2>How We Support Farmers</h2>
+            <p class="lead">
+                End-to-end agricultural solutions designed to take farmers from planting to profitable markets.
+            </p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 animate-on-scroll delay-1">
+                <div class="icon-card h-100">
+                    <div class="icon-wrapper">
+                        <i class="bi bi-handshake"></i>
+                    </div>
+                    <h4>Contract Coffee Farming</h4>
+                    <p>Structured programs providing quality inputs, technical support, and guaranteed market access for coffee farmers and cooperatives.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animate-on-scroll delay-2">
+                <div class="icon-card h-100">
+                    <div class="icon-wrapper">
+                        <i class="bi bi-person-check-fill"></i>
+                    </div>
+                    <h4>Agronomy Advisory</h4>
+                    <p>Professional guidance on soil fertility management, crop husbandry, pest and disease management from experienced agronomists.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 animate-on-scroll delay-3">
+                <div class="icon-card h-100">
+                    <div class="icon-wrapper">
+                        <i class="bi bi-mortarboard-fill"></i>
+                    </div>
+                    <h4>Farmer Training</h4>
+                    <p>Hands-on training through demonstration farms and field activities, equipping farmers with practical knowledge for improved productivity.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Contract Farming Detail ─────────────────────────── -->
+<section class="section section-gray" id="contract-farming">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 animate-on-scroll">
+                <img src="{% static 'images/sections/contract-farming.png' %}" alt="Contract farming partnership" 
+                     class="rounded-4 shadow-lg" style="width: 100%; height: 400px; object-fit: cover;">
+            </div>
+            <div class="col-lg-6 animate-on-scroll delay-2">
+                <div class="d-inline-flex align-items-center justify-content-center mb-3" 
+                     style="width: 60px; height: 60px; border-radius: var(--radius-md); background: linear-gradient(135deg, var(--organic-green), var(--green-light));">
+                    <i class="bi bi-handshake text-white fs-4"></i>
+                </div>
+                <h2 class="mb-3">Contract Coffee Farming Program</h2>
+                <p class="lead" style="color: var(--text-dark);">
+                    A comprehensive partnership model designed to secure stable markets while improving production 
+                    quality and profitability for farmers.
+                </p>
+                <p>
+                    Through our contract farming programs, we provide farmers and cooperatives with access to quality 
+                    inputs, technical support, and market linkage opportunities. These programs help farmers secure 
+                    stable markets while improving production quality and profitability.
+                </p>
+                <div class="row g-3 mt-3">
+                    <div class="col-6">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check2-circle" style="color: var(--organic-green); font-size: 1.2rem;"></i>
+                            <span>Access quality inputs</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check2-circle" style="color: var(--organic-green); font-size: 1.2rem;"></i>
+                            <span>Agronomy support</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check2-circle" style="color: var(--organic-green); font-size: 1.2rem;"></i>
+                            <span>High productivity</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-check2-circle" style="color: var(--organic-green); font-size: 1.2rem;"></i>
+                            <span>Market linkage</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="{% url 'core:contact' %}" class="btn btn-primary-brand mt-4" id="contract-farming-cta">
+                    <i class="bi bi-telephone me-2"></i> Join the Program
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Agronomy Advisory Detail ─────────────────────────── -->
+<section class="section" id="agronomy-advisory">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 order-lg-2 animate-on-scroll">
+                <img src="{% static 'images/sections/farmer-training.png' %}" alt="Agronomy advisory session" 
+                     class="rounded-4 shadow-lg" style="width: 100%; height: 400px; object-fit: cover;">
+            </div>
+            <div class="col-lg-6 order-lg-1 animate-on-scroll delay-2">
+                <div class="d-inline-flex align-items-center justify-content-center mb-3" 
+                     style="width: 60px; height: 60px; border-radius: var(--radius-md); background: linear-gradient(135deg, var(--harvest-yellow), var(--yellow-light));">
+                    <i class="bi bi-clipboard2-data fs-4" style="color: var(--deep-green);"></i>
+                </div>
+                <h2 class="mb-3">Agronomy Advisory Services</h2>
+                <p class="lead" style="color: var(--text-dark);">
+                    Expert agronomic guidance from field to harvest, ensuring optimal productivity at every stage.
+                </p>
+                <p>
+                    Our professional agronomy advisory services cover all aspects of farm management. Through 
+                    demonstration farms and field training activities, we equip farmers with practical knowledge 
+                    that directly improves productivity and farm management.
+                </p>
+                <ul class="list-unstyled mt-3">
+                    <li class="d-flex gap-3 mb-3">
+                        <div style="width: 40px; height: 40px; min-width: 40px; border-radius: 50%; background: var(--green-lighter); display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-1-circle-fill" style="color: var(--organic-green);"></i>
+                        </div>
+                        <div>
+                            <strong>Soil Fertility Management</strong>
+                            <p class="mb-0" style="font-size: 0.9rem;">Soil testing, amendment recommendations, and organic nutrition plans</p>
+                        </div>
+                    </li>
+                    <li class="d-flex gap-3 mb-3">
+                        <div style="width: 40px; height: 40px; min-width: 40px; border-radius: 50%; background: var(--green-lighter); display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-2-circle-fill" style="color: var(--organic-green);"></i>
+                        </div>
+                        <div>
+                            <strong>Crop Husbandry</strong>
+                            <p class="mb-0" style="font-size: 0.9rem;">Planting techniques, pruning, maintenance, and harvesting guidance</p>
+                        </div>
+                    </li>
+                    <li class="d-flex gap-3 mb-3">
+                        <div style="width: 40px; height: 40px; min-width: 40px; border-radius: 50%; background: var(--green-lighter); display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-3-circle-fill" style="color: var(--organic-green);"></i>
+                        </div>
+                        <div>
+                            <strong>Pest & Disease Management</strong>
+                            <p class="mb-0" style="font-size: 0.9rem;">Integrated pest management and organic disease control strategies</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Farmer Support Initiatives ──────────────────────── -->
+<section class="section section-green" id="farmer-support">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <h2>Farmer Support Initiatives</h2>
+            <p class="lead">Building resilient farming communities through comprehensive support programs.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 animate-on-scroll delay-1">
+                <div class="text-center p-4">
+                    <div class="mb-3" style="width: 70px; height: 70px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                        <i class="bi bi-book-half fs-3" style="color: var(--harvest-yellow);"></i>
+                    </div>
+                    <h5 style="color: var(--white);">Training & Capacity Building</h5>
+                    <p style="font-size: 0.9rem;">Hands-on workshops and field demonstrations for practical farming skills.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 animate-on-scroll delay-2">
+                <div class="text-center p-4">
+                    <div class="mb-3" style="width: 70px; height: 70px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                        <i class="bi bi-geo-alt-fill fs-3" style="color: var(--harvest-yellow);"></i>
+                    </div>
+                    <h5 style="color: var(--white);">Demonstration Farms</h5>
+                    <p style="font-size: 0.9rem;">Model farms showcasing best practices in organic and sustainable agriculture.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 animate-on-scroll delay-3">
+                <div class="text-center p-4">
+                    <div class="mb-3" style="width: 70px; height: 70px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                        <i class="bi bi-heart-pulse-fill fs-3" style="color: var(--harvest-yellow);"></i>
+                    </div>
+                    <h5 style="color: var(--white);">Soil Health Programs</h5>
+                    <p style="font-size: 0.9rem;">Comprehensive soil improvement and conservation initiatives for long-term fertility.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 animate-on-scroll delay-4">
+                <div class="text-center p-4">
+                    <div class="mb-3" style="width: 70px; height: 70px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                        <i class="bi bi-cloud-sun-fill fs-3" style="color: var(--harvest-yellow);"></i>
+                    </div>
+                    <h5 style="color: var(--white);">Climate-Smart Practices</h5>
+                    <p style="font-size: 0.9rem;">Promoting climate-resilient farming methods for environmental sustainability.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── FAQ Section ──────────────────────────────────────── -->
+<section class="section" id="faq-section">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <h2>Frequently Asked Questions</h2>
+            <p class="lead">Common questions about our services and programs.</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion faq-accordion" id="faqAccordion">
+                    {% if faqs %}
+                        {% for faq in faqs %}
+                        <div class="accordion-item animate-on-scroll delay-{{ forloop.counter }}">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button {% if not forloop.first %}collapsed{% endif %}" type="button" 
+                                        data-bs-toggle="collapse" data-bs-target="#faq{{ forloop.counter }}">
+                                    {{ faq.question }}
+                                </button>
+                            </h2>
+                            <div id="faq{{ forloop.counter }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}" 
+                                 data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">{{ faq.answer }}</div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% else %}
+                        <!-- Default FAQs -->
+                        <div class="accordion-item animate-on-scroll delay-1">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    How do I join the contract coffee farming program?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    You can register for our contract farming program by contacting us via phone at 0743 581 264 
+                                    or email at support@smartorganics.co.ke. We work with individual farmers while also partnering 
+                                    with cooperatives.Our team will guide you through the registration process and explain the benefits 
+                                    and requirements of the program.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item animate-on-scroll delay-2">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    What types of coffee seedlings do you offer?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We offer certified improved coffee varieties suited to diverse agro-ecological zones. These include 
+                                    disease-resistant varieties with high survival rates and superior yield potential. Contact us for 
+                                    specific variety availability.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item animate-on-scroll delay-3">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Do you deliver agricultural inputs across Kenya?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, we have distribution networks across Kenya. We deliver coffee seedlings, organic manure, 
+                                    and other agricultural inputs to farmers in various counties. Contact us to discuss delivery 
+                                    options for your location.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item animate-on-scroll delay-4">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    How can I access your farmer training programs?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our farmer training programs are available to all registered farmers and cooperatives. Training 
+                                    is conducted through demonstration farms, field visits, and workshop sessions. Register through 
+                                    our contact page or call us directly.
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── CTA ──────────────────────────────────────────────── -->
+<section class="cta-section" id="services-cta">
+    <div class="container text-center position-relative" style="z-index: 2;">
+        <div class="animate-on-scroll">
+            <h2 class="mb-3">Ready to Grow With Us?</h2>
+            <p class="lead mb-4" style="max-width: 600px; margin: 0 auto;">
+                Register today as an individual farmer or cooperative and access quality inputs, 
+                expert agronomy support, and guaranteed market linkage.
+            </p>
+            <div class="d-flex flex-wrap gap-3 justify-content-center">
+                <a href="{% url 'core:contact' %}" class="btn btn-yellow-brand btn-lg" id="services-register-cta">
+                    <i class="bi bi-person-plus-fill me-2"></i> Register Today
+                </a>
+                <a href="tel:{{ company_phone }}" class="btn btn-outline-light-brand btn-lg" id="services-call-cta">
+                    <i class="bi bi-telephone-fill me-2"></i> {{ company_phone }}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

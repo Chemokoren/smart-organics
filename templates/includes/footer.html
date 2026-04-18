@@ -1,0 +1,83 @@
+{% load static %}
+<!-- ── Footer ─────────────────────────────────────────── -->
+<footer class="so-footer" id="site-footer">
+    <div class="container">
+        <div class="row g-4 g-lg-5">
+            <!-- Brand Column -->
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-brand">
+                    <img src="{% static 'images/logos/main-logo.jpeg' %}" alt="{{ company_short }}" id="footer-logo">
+                    <p>{{ company_tagline }}</p>
+                    <p class="mb-0" style="font-size: 0.88rem;">Supporting smallholder farmers and cooperatives from production to market with sustainable agricultural solutions.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="{{ social_facebook }}" target="_blank" rel="noopener" aria-label="Facebook" id="footer-facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="{{ social_instagram }}" target="_blank" rel="noopener" aria-label="Instagram" id="footer-instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="{{ social_twitter }}" target="_blank" rel="noopener" aria-label="Twitter" id="footer-twitter"><i class="bi bi-twitter-x"></i></a>
+                    <a href="{{ social_linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn" id="footer-linkedin"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="col-lg-2 col-md-6">
+                <h5 class="footer-heading">Quick Links</h5>
+                <ul class="footer-links">
+                    <li><a href="{% url 'core:home' %}"><i class="bi bi-chevron-right"></i> Home</a></li>
+                    <li><a href="{% url 'core:about' %}"><i class="bi bi-chevron-right"></i> About Us</a></li>
+                    <li><a href="{% url 'core:products' %}"><i class="bi bi-chevron-right"></i> Products</a></li>
+                    <li><a href="{% url 'core:services' %}"><i class="bi bi-chevron-right"></i> Services</a></li>
+                    <li><a href="{% url 'core:contact' %}"><i class="bi bi-chevron-right"></i> Contact</a></li>
+                    <li><a href="{% url 'core:brand_guidelines' %}"><i class="bi bi-chevron-right"></i> Brand</a></li>
+                </ul>
+            </div>
+            
+            <!-- Our Services -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="footer-heading">Our Services</h5>
+                <ul class="footer-links">
+                    <li><a href="{% url 'core:products' %}"><i class="bi bi-chevron-right"></i> Coffee Seedlings</a></li>
+                    <li><a href="{% url 'core:products' %}"><i class="bi bi-chevron-right"></i> Organic Manure</a></li>
+                    <li><a href="{% url 'core:services' %}"><i class="bi bi-chevron-right"></i> Contract Farming</a></li>
+                    <li><a href="{% url 'core:services' %}"><i class="bi bi-chevron-right"></i> Agronomy Advisory</a></li>
+                    <li><a href="{% url 'core:services' %}"><i class="bi bi-chevron-right"></i> Farmer Training</a></li>
+                </ul>
+            </div>
+            
+            <!-- Contact & Newsletter -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="footer-heading">Get in Touch</h5>
+                <div class="footer-contact-item">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <span>{{ company_location }}</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="bi bi-telephone-fill"></i>
+                    <div>
+                        <a href="tel:{{ company_phone }}">{{ company_phone }}</a><br>
+                        <a href="tel:{{ company_phone_alt }}">{{ company_phone_alt }}</a>
+                    </div>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="bi bi-envelope-fill"></i>
+                    <a href="mailto:{{ company_email }}">{{ company_email }}</a>
+                </div>
+                
+                <h6 class="footer-heading mt-4" style="font-size: 0.9rem;">Newsletter</h6>
+                <form class="footer-newsletter newsletter-form" action="{% url 'core:newsletter_subscribe' %}" method="POST" id="footer-newsletter-form">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <input type="email" name="email" class="form-control" placeholder="Your email" required id="footer-newsletter-email">
+                        <button type="submit" class="btn" id="footer-newsletter-btn">
+                            <i class="bi bi-send-fill"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Footer Bottom -->
+        <div class="footer-bottom text-center">
+            <p>&copy; {% now "Y" %} {{ company_name }}. All rights reserved. | Reg: PVT-KAULRM3</p>
+        </div>
+    </div>
+</footer>
