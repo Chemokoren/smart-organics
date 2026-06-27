@@ -1,37 +1,48 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{% block meta_description %}{{ meta_description|default:'Smart Organics Limited — Kenya\'s trusted provider of certified coffee seedlings, organic agricultural inputs, and contract farming programs.' }}{% endblock %}">
-    <meta name="keywords" content="Smart Organics, organic farming, coffee seedlings, agricultural inputs, contract farming, Kenya, agribusiness, farmer training">
+    <meta name="description"
+        content="{% block meta_description %}{{ meta_description|default:'Smart Organics Limited — Kenya\'s trusted provider of certified coffee seedlings, organic agricultural inputs, and contract farming programs.' }}{% endblock %}">
+    <meta name="keywords"
+        content="Smart Organics, organic farming, coffee seedlings, agricultural inputs, contract farming, Kenya, agribusiness, farmer training">
     <meta name="author" content="Smart Organics Limited">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph -->
-    <meta property="og:title" content="{% block og_title %}{{ page_title|default:'Home' }} — {{ company_name }}{% endblock %}">
-    <meta property="og:description" content="{{ meta_description|default:'Healthy Soil • Wealthy Farmers • Better Life' }}">
+    <meta property="og:title"
+        content="{% block og_title %}{{ page_title|default:'Home' }} — {{ company_name }}{% endblock %}">
+    <meta property="og:description"
+        content="{{ meta_description|default:'Healthy Soil • Wealthy Farmers • Better Life' }}">
     <meta property="og:type" content="website">
     <meta property="og:image" content="{% static 'images/logos/main-logo.jpeg' %}">
     <meta property="og:locale" content="en_KE">
-    
+
     <title>{% block title %}{{ page_title|default:'Home' }}{% endblock %} — {{ company_name }}</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="{% static 'images/logos/logo-flat.jpeg' %}">
-    
+
     <!-- Bootstrap 5.3 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    
+
+    <!-- Zenu AI Chatbot -->
+    <script src="https://voice.zenu.co.ke/widget.js" data-tenant="pk_ab103355d6c37cbff77dd7e37f65a74a04a8043875766cbf"
+        async></script>
+
     {% block extra_css %}{% endblock %}
 </head>
+
 <body>
     <!-- Preloader -->
     <div class="preloader" id="preloader">
@@ -55,11 +66,14 @@
     </button>
 
     <!-- Bootstrap 5.3 JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
     <!-- Custom JS -->
     <script src="{% static 'js/main.js' %}"></script>
-    
+
     {% block extra_js %}{% endblock %}
 </body>
+
 </html>
